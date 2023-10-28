@@ -8,7 +8,139 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: $background-color;
+	background: $background-color no-repeat;
 	font-family: $main-font;
 	font-size: $text-size;
+	font-weight: 400;
+	color: $secondary-color;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: $main-wrapper;
+	margin: 0 auto;
+}
+
+.flexed-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: $secondary-color;
+	text-decoration: none;
+	letter-spacing: 1.28px;
+}
+
+.btn {
+	font-weight: 600;
+	font-size: 14px;
+	color: $primary-color;
+	text-decoration: none;
+}
+
+.btn_outline {
+	padding: 10px 20px;
+	border: 1px solid $primary-color;
+	border-radius: 41px;
+	transition: all 0.2s ease-out;
+
+	&:hover {
+		background: $primary-color;
+		color: $secondary-color;
+	}
+}
+
+
+.footer {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+}
+
+
+// =============================================================================
+// Header
+// =============================================================================
+
+.header {
+	margin: 40px 0 40px 0;
+}
+
+.header__menu {
+	display: flex;
+	align-items: center;
+}
+
+.header__menu-list {
+	padding: 0;
+	margin: 0 47px 0 0;
+	display: flex;
+	list-style: none;
+}
+
+.header__menu-item {
+	margin-right: 54px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.header__menu-link {
+	font-weight: 500;
+	font-size: 14px;
+	color: $primary-color;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+
+	&:hover {
+		color: $secondary-color;
+	}
+}
+
+// =============================================================================
+// Slider main
+// =============================================================================
+
+.splide__pagination {
+	position: fixed;
+  top: 50%;
+  right: 60px;
+  flex-direction: column;
+  transform: translateY(-25%);
+}
+
+.splide__pagination__page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	background: none;
+	margin-bottom: 28px;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+
+	&:after {
+		content: " ";
+		width: 4px;
+		height: 4px;
+		display: block;
+		background: #F8D3EB;
+		border-radius: 10px;
+		transition: all 0.2s ease-out;
+	}
+
+	&.is-active:after {
+		height: 20px;
+		cursor: default;
+	}
 }

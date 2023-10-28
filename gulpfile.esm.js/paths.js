@@ -21,7 +21,7 @@ const paths = {
 export const librariesArr = [
   {
     name: 'Splide',
-    css: [`${paths.src.libraries}/splide/css/splide.min.css`],
+    css: [`${paths.src.libraries}/splide/css/splide-core.min.css`],
     js: [`${paths.src.libraries}/splide/js/splide.min.js`]
   },
 ]
